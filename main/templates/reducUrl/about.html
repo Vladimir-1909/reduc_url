@@ -1,0 +1,38 @@
+{% extends 'reducUrl/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+{% load static %}
+<div class="container">
+    <div class="form-section">
+        <h1>{{ title }}</h1>
+        <div class="about">
+            <div class="about_p">
+                <div class="">
+                    <img src="{% static 'main/img/multimedia.png' %}" alt="about" class="img_about">
+                </div>
+                <div class="">
+                    <p>Удобный интерфейс</p>
+                </div>
+            </div>
+            <div class="about_p">
+                <div class="">
+                    <img src="{% static 'main/img/multi.png' %}" alt="about" class="img_about">
+                </div>
+                <div class="">
+                    <p>Лучшие на рынке</p>
+                </div>
+            </div>
+            <div class="about_p">
+                <div class="">
+                    <img src="{% static 'main/img/log-in.png' %}" alt="about" class="img_about">
+                </div>
+            <div class="">
+                <p>Бесплатная регистрация</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

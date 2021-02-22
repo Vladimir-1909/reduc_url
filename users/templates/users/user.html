@@ -1,0 +1,25 @@
+{% extends 'reducUrl/base.html' %}
+
+{% block title %}Авторизация на сайте{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="form-section">
+        <h1>Авторизация на сайте</h1>
+        {% if messages %}
+        {% for mess in messages %}
+            <div class="mess_prof">{{ mess }}</div>
+        {% endfor %}
+        {% endif %}
+        <form method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <div class="profile_btn">
+                <button type="submit" class="profile__btn">Войти</button>
+            </div>
+        </form>
+        <hr>
+        Забыли пароль? <a href="{% url 'pass-reset' %}" class="a_s">Получите новый</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'reducUrl/base.html' %}
+
+{% block title %}Ссылка{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="form-section">
+        <h1>Создание ссылок</h1>
+        {% if messages %}
+        {% for mess in messages %}
+        <div class="mess">{{ mess }}</div>
+        {% endfor %}
+        {% endif %}
+        <form method="POST">
+            {% csrf_token %}
+            {{ linkform }}
+            <button class="profile__btn" type="submit">Создать ссылку</button>
+        </form>
+    </div>
+    <div class="link">
+        <h2 class="link_z">Доступные ссылки</h2>
+        {% if LinkReducs %}
+        {% for link in LinkReducs %}
+        <div class="link_s">
+            <p>Ссылка - <a href="{{ link.link }}" target="_blank">/link/{{ link.reducLink }}/</a></p>
+        </div>
+        {% endfor %}
+        {% else %}
+        <h2>У ваc нет сокращенных ссылок</h2>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'reducUrl/base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="form-section">
+        <h2>Восстановление пароля</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Запросить новый пароль</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
