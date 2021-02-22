@@ -8,7 +8,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-pictures/
+pictures/user_images/
 build/
 develop-eggs/
 dist/
