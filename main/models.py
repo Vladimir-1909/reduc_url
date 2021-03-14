@@ -8,5 +8,4 @@ class LinkReduc(models.Model):
     author = models.ForeignKey(User, verbose_name='Автор', on_delete=models.CASCADE)
 
     def __str__(self):
-        # return f'{self.reducLink} от {self.author} '
-        return self.link
+        return f'{self.reducLink} от {self.author}'
