@@ -48,6 +48,5 @@ class Link(LoginRequiredMixin, FormMixin, ListView):
         self.object.author = self.request.user
         # reducLink = LinkReduc.objects.filter(author=self.request.user)
         # print(reducLink)
-        # print(reducLink)
         self.object.save()
         return super().form_valid(form)
